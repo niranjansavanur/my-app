@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
-​
 void main() {
   runApp(NiruApp());
 }
-​
 class NiruApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return _NiruAppState();
   }
 }
-​
 class _NiruAppState extends State<NiruApp> {
   final questions = const [
     {
@@ -27,7 +24,6 @@ class _NiruAppState extends State<NiruApp> {
     },
   ];
   var _questionIndex = 0;
-​
   void _answerQuestion() {
     setState(() {
       _questionIndex = _questionIndex + 1;
@@ -39,7 +35,6 @@ class _NiruAppState extends State<NiruApp> {
       print('No more questions!');
     }
   }
-​
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -66,12 +61,9 @@ class _NiruAppState extends State<NiruApp> {
     );
   }
 }
-​
 class Question extends StatelessWidget {
   final String questionText;
-​
   Question(this.questionText);
-​
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -85,12 +77,10 @@ class Question extends StatelessWidget {
     );
   }
 }
-​
 class Answer extends StatelessWidget {
   final Function selectHandler;
   final String answerText;
   Answer(this.selectHandler, this.answerText);
-​
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -104,4 +94,4 @@ class Answer extends StatelessWidget {
     );
   }
 }
-​
+
